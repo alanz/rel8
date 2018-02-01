@@ -45,9 +45,9 @@ type of the form ``C f name hasDefault t``. Let's see how that looks with some
 example tables::
 
   data Part f = Part
-    { partId     :: C f "PID" 'HasDefault Int
+    { partId     :: C f "PID" 'HasDefault Integer
     , partName   :: C f "PName" 'NoDefault String
-    , partColor  :: C f "Color" 'NoDefault Int
+    , partColor  :: C f "Color" 'NoDefault Integer
     , partWeight :: C f "Weight" 'NoDefault Double
     , partCity   :: C f "City" 'NoDefault String
     } deriving (Generic)
