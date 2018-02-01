@@ -19,6 +19,7 @@ Required language extensions and imports
   import Control.Applicative
   import Control.Arrow
   import Rel8
+  import qualified Opaleye as O
 
 To use Rel8, you will need a few language extensions:
 
@@ -128,9 +129,9 @@ each row of the second query - by sequencing queries inside a ``O.Query``. Let's
 introduce another table::
 
   data Supplier f = Supplier
-    { supplierId :: C f "SID" 'HasDefault Int
+    { supplierId :: C f "SID" 'HasDefault Integer
     , supplierName :: C f "SName" 'NoDefault String
-    , supplierStatus :: C f "Status" 'NoDefault Int
+    , supplierStatus :: C f "Status" 'NoDefault Integer
     , supplierCity :: C f "City" 'NoDefault String
     } deriving (Generic)
 
